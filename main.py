@@ -37,6 +37,10 @@ def clickchangescore(x,y):
     score += 1
     score_writer.clear()
     score_writer.write(f"Skorunuz : {score}", align="center", font=("Arial", 24, "normal"))
+    
+
+def stopmoving(x,y):
+    myTurtle.home()
 
 def kalan_sure():
     global sure
@@ -49,6 +53,7 @@ def kalan_sure():
         if i == 0:
             timer_writer.clear()
             timer_writer.write("GAME OVER", align="center", font=("Arial", 24, "normal"))
+            myTurtle.onclick(stopmoving)
             break
 
 score_writer.write(f"Skorunuz : {score}", align="center", font=("Arial", 24, "normal"))
